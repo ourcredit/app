@@ -3,7 +3,7 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 // 需要维护的状态
 const state = {
-  title: "唯一咖啡店",
+  title: "qicq",
   loading: false
 };
 

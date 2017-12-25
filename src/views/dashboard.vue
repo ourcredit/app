@@ -1,6 +1,6 @@
 <template>
   <div>
-    wwwwwwwwwww
+    欢迎页
   </div>
 </template>
 

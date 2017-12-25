@@ -2,7 +2,7 @@ import Vue from "vue"
 import Router from "vue-router"
 
 Vue.use(Router)
-
+const dashboard = r => require.ensure([], () => r(require('@/views/dashboard')), 'dashboard');
 export default new Router({
   routes: [{
       path: "/title",
@@ -17,7 +17,7 @@ export default new Router({
       children: [{
         path: "/dashboard",
         name: "dashboard",
-        component: r => require(["@/views/dashboard"], r)
+        component: dashboard
       }]
     }
   ]

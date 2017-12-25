@@ -10,6 +10,7 @@
 
 <script>
 import { Tab, TabItem, ViewBox } from "vux";
+
 import AppHeader from "./Header";
 import AppFooter from "./Footer";
 export default {

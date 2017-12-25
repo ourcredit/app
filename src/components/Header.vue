@@ -2,7 +2,7 @@
   <div>
     <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">{{title}}</x-header>
     <div v-transfer-dom>
-      <actionsheet :on-click-menu="share" :menus="menus" v-model="showMenus" show-cancel></actionsheet>
+      <actionsheet  :menus="menus" v-model="showMenus" show-cancel></actionsheet>
     </div>
   </div>
 </template>
