@@ -1,14 +1,14 @@
 <template>
   <tabbar  style="position: fixed">
-    <tabbar-item  link="/coffee">
+    <tabbar-item  link="/scan">
       <img slot="icon" selected  src="../assets/icons/a.png">
       <span slot="label">扫一扫</span>
     </tabbar-item>
-      <tabbar-item  link="/order">
+      <tabbar-item  link="/dashboard">
       <img slot="icon"   src="../assets/icons/a.png">
-      <span slot="label">订单</span>
+      <span slot="label">控制台</span>
     </tabbar-item>
-    <tabbar-item  link="/my">
+    <tabbar-item badge="2"  link="/my">
       <img slot="icon"  src="../assets/icons/b.png">
       <span slot="label">我的</span>
     </tabbar-item>

@@ -1,19 +1,16 @@
 <template>
   <div>
-    <grid :cols="3">
-      <grid-item v-for="i in 9" :key="i">
-        <span class="grid-center">{{i}}</span>
-      </grid-item>
-    </grid>
+    我的
   </div>
 </template>
 
 <script>
-import { Grid, GridItem } from "vux";
+import { Group, Cell } from "vux";
+
 export default {
   components: {
-    Grid,
-    GridItem
+    Group,
+    Cell
   },
   data() {
     return {
@@ -27,7 +24,6 @@ export default {
 .vux-demo {
   text-align: center;
 }
-
 .logo {
   width: 100px;
   height: 100px;
