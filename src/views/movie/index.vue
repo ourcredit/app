@@ -1,6 +1,6 @@
 <template>
 <div class="gridlist-demo-container">
-  <mu-grid-list class="gridlist-demo">
+  <mu-grid-list  class="gridlist-demo">
     <mu-grid-tile v-for="tile, index in list" :key="index">
       <img :src="tile.image"/>
       <span slot="title">{{tile.title}}</span>
@@ -70,7 +70,7 @@ export default {
 }
 
 .gridlist-demo {
-  width: 500px;
+  width: 100%;
   height: 100%;
   overflow-y: auto;
 }
