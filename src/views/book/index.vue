@@ -1,77 +1,75 @@
 <template>
-<div class="gridlist-demo-container">
-  <mu-grid-list class="gridlist-demo">
-    <mu-grid-tile v-for="tile, index in list" :key="index">
-      <img :src="tile.image"/>
-      <span slot="title">{{tile.title}}</span>
-      <span slot="subTitle">by <b>{{tile.author}}</b></span>
-      <mu-icon-button icon="star_border" slot="action"/>
-    </mu-grid-tile>
-  </mu-grid-list>
+<div>
+  <mu-list>
+    <mu-sub-header>最近聊天记录</mu-sub-header>
+    <mu-list-item title="Mike Li">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+    <mu-list-item title="Maco Mai">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+    <mu-list-item title="Alex Qin">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+    <mu-list-item title="Allen Qun">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+    <mu-list-item title="Myron Liu">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+  </mu-list>
+  <mu-divider/>
+  <mu-list>
+    <mu-sub-header>历史聊天记录</mu-sub-header>
+    <mu-list-item title="Gaia Zhou">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+    <mu-list-item title="Miller Wang">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+      <mu-list-item title="Gaia Zhou">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+    <mu-list-item title="Miller Wang">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+      <mu-list-item title="Gaia Zhou">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+    <mu-list-item title="Miller Wang">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+      <mu-list-item title="Gaia Zhou">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+    <mu-list-item title="Miller Wang">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+      <mu-list-item title="Gaia Zhou">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+    <mu-list-item title="Miller Wang">
+      <mu-avatar src="static/images/uicon.jpg" slot="leftAvatar"/>
+      <mu-icon value="chat_bubble" slot="right"/>
+    </mu-list-item>
+  </mu-list>
 </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      list: [
-        {
-          image: "static/images/breakfast.jpg",
-          title: "Breakfast",
-          author: "Myron"
-        },
-        {
-          image: "static/images/burger.jpg",
-          title: "Burger",
-          author: "Linyu"
-        },
-        {
-          image: "static/images/camera.jpg",
-          title: "Camera",
-          author: "ruolin"
-        },
-        {
-          image: "static/images/hats.jpg",
-          title: "Hats",
-          author: "kakali"
-        },
-        {
-          image: "static/images/honey.jpg",
-          title: "Honey",
-          author: "yuyang"
-        },
-        {
-          image: "static/images/morning.jpg",
-          title: "Morning",
-          author: "mokayi"
-        },
-        {
-          image: "static/images/vegetables.jpg",
-          title: "Vegetables",
-          author: "a"
-        },
-        {
-          image: "static/images/water-plant.jpg",
-          title: "water",
-          author: "b"
-        }
-      ]
-    };
-  }
-};
+export default {};
 </script>
-
-<style>
-.gridlist-demo-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.gridlist-demo {
-  width: 500px;
-  height: 100%;
-  overflow-y: auto;
-}
-</style>

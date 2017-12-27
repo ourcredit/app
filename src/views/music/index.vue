@@ -1,77 +1,21 @@
 <template>
-<div class="gridlist-demo-container">
-  <mu-grid-list class="gridlist-demo">
-    <mu-grid-tile v-for="tile, index in list" :key="index">
-      <img :src="tile.image"/>
-      <span slot="title">{{tile.title}}</span>
-      <span slot="subTitle">by <b>{{tile.author}}</b></span>
-      <mu-icon-button icon="star_border" slot="action"/>
-    </mu-grid-tile>
-  </mu-grid-list>
-</div>
+<mu-card>
+  <mu-card-header title="张三" subTitle="二货">
+    <mu-avatar src="static/images/uicon.jpg" slot="avatar"/>
+  </mu-card-header>
+  <mu-card-media title="阳光" subTitle="3℃">
+    <img src="static/images/sun.jpg" />
+  </mu-card-media>
+  <mu-card-title title="日记" subTitle="2017/12/27"/>
+  <mu-card-text>
+    散落在指尖的阳光，我试着轻轻抓住光影的踪迹，它却在眉宇间投下一片淡淡的阴影。
+    调皮的阳光掀动了四月的心帘，温暖如约的歌声渐起。
+    似乎在诉说着，我也可以在漆黑的角落里，找到阴影背后的阳光，
+    找到阳光与阴影奏出和谐的旋律。我要用一颗敏感赤诚的心迎接每一缕滑过指尖的阳光！
+  </mu-card-text>
+  <mu-card-actions>
+    <mu-flat-button label="赞"/>
+    <mu-flat-button label="转"/>
+  </mu-card-actions>
+</mu-card>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      list: [
-        {
-          image: "static/images/breakfast.jpg",
-          title: "Breakfast",
-          author: "Myron"
-        },
-        {
-          image: "static/images/burger.jpg",
-          title: "Burger",
-          author: "Linyu"
-        },
-        {
-          image: "static/images/camera.jpg",
-          title: "Camera",
-          author: "ruolin"
-        },
-        {
-          image: "static/images/hats.jpg",
-          title: "Hats",
-          author: "kakali"
-        },
-        {
-          image: "static/images/honey.jpg",
-          title: "Honey",
-          author: "yuyang"
-        },
-        {
-          image: "static/images/morning.jpg",
-          title: "Morning",
-          author: "mokayi"
-        },
-        {
-          image: "static/images/vegetables.jpg",
-          title: "Vegetables",
-          author: "a"
-        },
-        {
-          image: "static/images/water-plant.jpg",
-          title: "water",
-          author: "b"
-        }
-      ]
-    };
-  }
-};
-</script>
-
-<style>
-.gridlist-demo-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.gridlist-demo {
-  width: 500px;
-  height: 100%;
-  overflow-y: auto;
-}
-</style>
