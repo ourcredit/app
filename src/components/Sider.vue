@@ -5,9 +5,9 @@
       <mu-list-item title="姓名">
         <mu-avatar slot="left" src="static/images/uicon.jpg" />
       </mu-list-item>
-      <mu-list-item title="Menu Item 2"/>
-      <mu-list-item title="Menu Item 3"/>
-      <mu-list-item @click.native="toggle" title="Close"/>
+      <mu-list-item title="1024"/>
+      <mu-list-item title="2048"/>
+      <mu-list-item @click.native="toggle" title="关闭"/>
     </mu-list>
   </mu-drawer>
 </template>

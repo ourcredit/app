@@ -1,7 +1,6 @@
 <template>
 <div class="gridlist-demo-container">
   <mu-grid-list class="gridlist-demo">
-    <mu-sub-header>图片展示</mu-sub-header>
     <mu-grid-tile v-for="tile, index in list" :key="index">
       <img :src="tile.image"/>
       <span slot="title">{{tile.title}}</span>
@@ -50,12 +49,12 @@ export default {
         {
           image: "static/images/vegetables.jpg",
           title: "Vegetables",
-          author: "NUyyyyyyy"
+          author: "a"
         },
         {
           image: "static/images/water-plant.jpg",
           title: "water",
-          author: "TDDyyyyyyy"
+          author: "b"
         }
       ]
     };
@@ -72,7 +71,7 @@ export default {
 
 .gridlist-demo {
   width: 500px;
-  height: 450px;
+  height: 100%;
   overflow-y: auto;
 }
 </style>
