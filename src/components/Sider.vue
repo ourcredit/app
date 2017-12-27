@@ -1,8 +1,10 @@
 <template>
   <mu-drawer :docked="false" left :open="open" >
-    <mu-appbar title="Muse UI"/>
+    <mu-appbar title="个人详情"/>
     <mu-list>
-      <mu-list-item title="Menu Item 1"/>
+      <mu-list-item title="姓名">
+        <mu-avatar slot="left" src="static/images/uicon.jpg" />
+      </mu-list-item>
       <mu-list-item title="Menu Item 2"/>
       <mu-list-item title="Menu Item 3"/>
       <mu-list-item @click.native="toggle" title="Close"/>

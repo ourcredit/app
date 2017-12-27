@@ -1,9 +1,12 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header  ></app-header>
+    <div class="container">
     <router-view></router-view>
+    </div>
     <app-footer></app-footer>
     <app-sider ></app-sider>
+      <mu-back-top/>
   </div>
 </template>
 
@@ -28,5 +31,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.container {
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
 </style>
