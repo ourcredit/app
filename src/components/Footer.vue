@@ -1,35 +1,36 @@
 <template>
-  <tabbar  style="position: fixed">
-    <tabbar-item  link="/scan">
-      <img slot="icon" selected  src="../assets/icons/a.png">
-      <span slot="label">扫一扫</span>
-    </tabbar-item>
-      <tabbar-item  link="/dashboard">
-      <img slot="icon"   src="../assets/icons/a.png">
-      <span slot="label">控制台</span>
-    </tabbar-item>
-    <tabbar-item badge="2"  link="/my">
-      <img slot="icon"  src="../assets/icons/b.png">
-      <span slot="label">我的</span>
-    </tabbar-item>
-  </tabbar>
+  <mu-paper >
+    <mu-bottom-nav :value="bottomNav" shift @change="handleChange">
+      <mu-bottom-nav-item to="/movie" value="movies" title="电影" icon="ondemand_video"/>
+      <mu-bottom-nav-item to="/music" value="music" title="音乐" icon="music_note"/>
+      <mu-bottom-nav-item to="/book" value="books" title="图书" icon="books"/>
+      <mu-bottom-nav-item to="/my" value="pictures" title="我的" icon="photo"/>
+    </mu-bottom-nav>
+  </mu-paper>
+
 </template>
-<style>
-.add {
-  height: 40px;
-  width: 40px;
-}
-</style>
+
 <script>
-import { Tabbar, TabbarItem } from "vux";
 export default {
-  name: "AppFooter",
-  components: {
-    Tabbar,
-    TabbarItem
-  },
   data() {
-    return {};
+    return {
+      bottomNav: "movies",
+      bottomNavColor: "movies"
+    };
+  },
+  methods: {
+    handleChange(val) {
+      this.bottomNav = val;
+    }
   }
 };
 </script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.mu-tabs,
+.mu-paper {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+</style>

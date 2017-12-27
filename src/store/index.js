@@ -3,8 +3,9 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 // 需要维护的状态
 const state = {
-  title: "qicq",
-  loading: false
+  title: "av",
+  loading: false,
+  open: false
 };
 
 const mutations = {
@@ -14,6 +15,9 @@ const mutations = {
   },
   updateLoading(state, value) {
     state.loading = value
+  },
+  updateOpen(state, value) {
+    state.open = value
   }
 };
 
