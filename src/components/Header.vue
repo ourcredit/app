@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">{{title}}</x-header>
+    <x-header  slot="header" style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}" @on-click-more="showMenus = true">{{title}}</x-header>
     <div v-transfer-dom>
       <actionsheet  :menus="menus" v-model="showMenus" show-cancel></actionsheet>
     </div>

@@ -7,9 +7,14 @@ const my = r => require.ensure([], () => r(require('@/views/my/my')), 'my');
 const scan = r => require.ensure([], () => r(require('@/views/scan/scan')), 'scan');
 export default new Router({
   routes: [{
-      path: "/title",
-      name: "title",
-      component: r => require(["@/components/title"], r)
+      path: "/login",
+      name: "login",
+      component: r => require.ensure([], () => r(require('@/views/login/login')), 'login')
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: r => require.ensure([], () => r(require('@/views/login/register')), 'register')
     },
     {
       path: "/",

@@ -2,7 +2,7 @@
   <div>
      <swiper :list="demo03_list"
       auto
-      style="margin:0 auto;"
+      style="margin:45px auto;"
        height="180px"
         dots-class="custom-bottom"
          dots-position="center"></swiper>

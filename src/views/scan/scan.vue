@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div style="margin:45px auto;">
     <sticky>
         <tab :line-width="1" >
           <tab-item selected>正在正映</tab-item>
