@@ -1,12 +1,11 @@
 <template>
     <mu-appbar class="header"  :title="title">
-      <mu-icon-button @click="toggle" icon="menu" slot="left" />
-      <mu-icon-menu icon="more_vert" slot="right">
-        <mu-menu-item title="菜单 1" />
-        <mu-menu-item title="菜单 2" />
-        <mu-menu-item title="菜单 3" />
-        <mu-menu-item title="菜单 4" />
-        <mu-menu-item title="菜单 5" />
+      <mu-icon-button  @click="toggle" icon="menu" slot="left" />
+      <mu-icon-menu :value="theme" @change="changetheme" icon="more_vert" slot="right">
+        <mu-menu-item title="Light" value="light"/>
+        <mu-menu-item title="Dark" value="dark"/>
+        <mu-menu-item title="Carbon" value="carbon"/>
+        <mu-menu-item title="Teal" value="teal"/>
       </mu-icon-menu>
     </mu-appbar>
 
@@ -14,15 +13,41 @@
 
 <script>
 import { mapState, mapMutations } from "vuex";
+import light from "!raw-loader!muse-ui/dist/theme-default.css";
+import dark from "!raw-loader!muse-ui/dist/theme-dark.css";
+import carbon from "!raw-loader!muse-ui/dist/theme-carbon.css";
+import teal from "!raw-loader!muse-ui/dist/theme-teal.css";
 export default {
   name: "Header",
   data() {
-    return {};
+    return {
+      theme: "carbon",
+      themes: {
+        light,
+        dark,
+        carbon,
+        teal
+      }
+    };
   },
   methods: {
     ...mapMutations(["updateOpen"]),
     toggle() {
       this.updateOpen(!this.open);
+    },
+    changetheme(item) {
+      this.theme = item;
+      const styleEl = this.getThemeStyle();
+      styleEl.innerHTML = this.themes[item] || "";
+    },
+    getThemeStyle() {
+      const themeId = "muse-theme";
+      let styleEl = document.getElementById(themeId);
+      if (styleEl) return styleEl;
+      styleEl = document.createElement("style");
+      styleEl.id = themeId;
+      document.body.appendChild(styleEl);
+      return styleEl;
     }
   },
   computed: {
