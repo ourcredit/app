@@ -15,8 +15,7 @@ import { mapMutations } from "vuex";
 export default {
   data() {
     return {
-      bottomNav: "电影",
-      bottomNavColor: "电影"
+      bottomNav: "电影"
     };
   },
   methods: {
