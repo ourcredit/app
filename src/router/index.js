@@ -24,6 +24,10 @@ export default new Router({
       path: '/book',
       name: 'book',
       component: r => require.ensure([], () => r(require("views/book/index")), "book")
+    }, {
+      path: '/camera',
+      name: 'camera',
+      component: r => require.ensure([], () => r(require("views/camera/index")), "camera")
     }]
   }]
 })

@@ -28,8 +28,7 @@ module.exports = {
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production' ?
-      config.build.assetsPublicPath :
-      config.dev.assetsPublicPath
+      config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -39,6 +38,7 @@ module.exports = {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components'),
+      'common': path.resolve(__dirname, '../src/common'),
       'views': path.resolve(__dirname, '../src/views'),
       'styles': path.resolve(__dirname, '../src/styles'),
       'api': path.resolve(__dirname, '../src/api'),

@@ -5,9 +5,15 @@
       <mu-list-item title="姓名">
         <mu-avatar slot="left" src="static/images/uicon.jpg" />
       </mu-list-item>
-      <mu-list-item title="1024"/>
-      <mu-list-item title="2048"/>
-      <mu-list-item @click.native="toggle" title="关闭"/>
+      <mu-list-item to="/camera" title="摄像头">
+        <mu-icon slot="left" value="inbox"/>
+      </mu-list-item>
+      <mu-list-item title="照相机">
+       <mu-icon slot="left" value="send"/>
+      </mu-list-item>
+      <mu-list-item @click.native="toggle" title="">
+         <mu-icon slot="right" value="home"/>
+      </mu-list-item>
     </mu-list>
   </mu-drawer>
 </template>
