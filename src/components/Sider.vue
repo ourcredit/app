@@ -1,17 +1,17 @@
 <template>
   <mu-drawer :docked="false" left :open="open" >
     <mu-appbar title="个人详情"/>
-    <mu-list >
+    <mu-list @change="to">
       <mu-list-item title="姓名">
         <mu-avatar slot="left" src="static/images/uicon.jpg" />
       </mu-list-item>
-      <mu-list-item to="/camera" title="摄像头">
+      <mu-list-item value="/camera"  title="摄像头">
         <mu-icon slot="left" value="inbox"/>
       </mu-list-item>
-      <mu-list-item to="/camera" title="图片库">
+      <mu-list-item value="/image"  title="图片库">
        <mu-icon slot="left" value="send"/>
       </mu-list-item>
-        <mu-list-item to="/device" title="设备信息">
+        <mu-list-item value="/device"   title="设备信息">
        <mu-icon slot="left" value="send"/>
       </mu-list-item>
       <mu-list-item @click.native="toggle" title="">
@@ -31,6 +31,12 @@ export default {
     ...mapMutations(["updateOpen"]),
     toggle() {
       this.updateOpen(!this.open);
+    },
+    to(val) {
+      if (val) {
+        this.$router.push({ path: val });
+        this.updateOpen(false);
+      }
     }
   },
   computed: {

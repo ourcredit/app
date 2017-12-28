@@ -8,18 +8,16 @@
       <mu-list-item  disabled title="uuid" :describeText="device.uuid" />
     </mu-list>
     当前位置
-     latitude:{{location.coords.latitude }}
-     longitude :{{location.coords.longitude  }}
-     altitude:{{location.coords.altitude }}
+     latitude:{{location.latitude }}
+     longitude :{{location.longitude  }}
+     altitude:{{location.altitude }}
       <mu-divider/>
   当前方向
      alpha:{{orientation.alpha }}
      beta  :{{orientation.beta   }}
      gamma :{{orientation.gamma }}
-
   </div>
 </template>
-
 <script>
 import { plusReady } from "common/index.js";
 export default {
@@ -40,7 +38,7 @@ export default {
       // 获取坐标
       plus.geolocation.getCurrentPosition(
         r => {
-          this.location = r;
+          this.location = r.coords;
         },
         e => {
           console.log(e);
